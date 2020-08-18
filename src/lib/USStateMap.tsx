@@ -466,7 +466,7 @@ export class USStateMap extends Component<USStateMapProps, USStateMapState>{
         }
         let xTranslation = xOffset + (isUndefined(this.props.x) ? 0 : this.props.x);
         let yTranslation = yOffset + (isUndefined(this.props.y) ? 0 : this.props.y);
-        return <svg width={this.props.width} height={this.props.height} viewBox="0 0 900 500" onClick={this.rootClick}>
+        return <svg width={this.props.width} height={this.props.height} viewBox={this.props.isCartogram ? "50 0 850 500" : "50 60 850 450"} onClick={this.rootClick}>
             <g className="usStateG" transform={`scale(${scale} ${scale}) translate(${xTranslation}, ${yTranslation})`} onClick={this.rootClick}>
                 <defs>
                     {gradientElements}

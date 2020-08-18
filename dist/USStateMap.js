@@ -434,7 +434,7 @@ var USStateMap = /** @class */ (function (_super) {
         }
         var xTranslation = xOffset + (util_1.isUndefined(this.props.x) ? 0 : this.props.x);
         var yTranslation = yOffset + (util_1.isUndefined(this.props.y) ? 0 : this.props.y);
-        return React.createElement("svg", { width: this.props.width, height: this.props.height, viewBox: "0 0 900 500", onClick: this.rootClick },
+        return React.createElement("svg", { width: this.props.width, height: this.props.height, viewBox: this.props.isCartogram ? "50 0 850 500" : "50 60 850 450", onClick: this.rootClick },
             React.createElement("g", { className: "usStateG", transform: "scale(" + scale + " " + scale + ") translate(" + xTranslation + ", " + yTranslation + ")", onClick: this.rootClick },
                 React.createElement("defs", null, gradientElements),
                 paths));
