@@ -278,7 +278,7 @@ var USStateMap = /** @class */ (function (_super) {
     USStateMap.prototype.updateD3 = function (props) {
         // Make the actual SVG be square, because that's how the paths (especially for Normal mode)
         // are laid out.
-        var actualDimension = Math.min(props.width, props.height);
+        var actualDimension = Math.min(900, 500);
         this.projection
             .translate([actualDimension / 2, actualDimension / 2])
             .scale(actualDimension * 1.0);

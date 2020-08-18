@@ -238,7 +238,7 @@ export class USStateMap extends Component<USStateMapProps, USStateMapState>{
     updateD3(props) {
         // Make the actual SVG be square, because that's how the paths (especially for Normal mode)
         // are laid out.
-        let actualDimension = Math.min(props.width, props.height);
+        let actualDimension = Math.min(900, 500);
         this.projection
             .translate([actualDimension / 2, actualDimension / 2])
             .scale(actualDimension * 1.0);
