@@ -80,11 +80,11 @@ interface USStateMapProps {
     /**
      * Width of the map. 900 seems like a good value.
      * */
-    width: number;
+    width: number | string;
     /**
      * Height of the map. 500 seems like a good value.
      * */
-    height: number;
+    height: number | string;
     /**
      * Callback that is called when there's an error loading data.
      * */
