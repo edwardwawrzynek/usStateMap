@@ -114,11 +114,11 @@ interface USStateMapProps {
     /**
      * Width of the map. 900 seems like a good value.
      * */
-    width: number,
+    width: number | string,
     /**
      * Height of the map. 500 seems like a good value.
      * */
-    height: number,
+    height: number | string,
     /**
      * Callback that is called when there's an error loading data.
      * */
@@ -466,7 +466,7 @@ export class USStateMap extends Component<USStateMapProps, USStateMapState>{
         }
         let xTranslation = xOffset + (isUndefined(this.props.x) ? 0 : this.props.x);
         let yTranslation = yOffset + (isUndefined(this.props.y) ? 0 : this.props.y);
-        return <svg width={this.props.width} height={this.props.height} onClick={this.rootClick}>
+        return <svg width={this.props.width} height={this.props.height} viewBox="0 0 900 500" onClick={this.rootClick}>
             <g className="usStateG" transform={`scale(${scale} ${scale}) translate(${xTranslation}, ${yTranslation})`} onClick={this.rootClick}>
                 <defs>
                     {gradientElements}
